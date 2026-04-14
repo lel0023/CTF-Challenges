@@ -1,8 +1,9 @@
-# WebStrike Lab (Easy | Short)
+# WebStrike Lab 
 
 **Platform:** CyberDefenders    
 **Difficulty:** Easy  
-**Duration:** ~30 min  
+**Duration:** ~30 min 
+**Link:** https://cyberdefenders.org/blueteam-ctf-challenges/webstrike/
  
 ## Scenario
 A suspicious file was identified on a company web server, raising alarms within the intranet. The Development team flagged the anomaly, suspecting potential malicious activity. To address the issue, the network team captured critical network traffic and prepared a PCAP file for review.
