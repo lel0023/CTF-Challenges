@@ -2,7 +2,7 @@
 
 **Platform:** CyberDefenders    
 **Difficulty:** Easy  
-**Duration:** ~30 min 
+**Duration:** ~30 min   
 **Link:** https://cyberdefenders.org/blueteam-ctf-challenges/webstrike/
  
 ## Scenario
