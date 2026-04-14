@@ -56,5 +56,5 @@ Looking at the reverse shell code, we can clearly see that the port is 8080 (the
 ### Q6
 Recognizing the significance of compromised data helps prioritize incident response actions. Which file was the attacker attempting to exfiltrate?  
 
-To answer this question, we have to look at the network traffic after the payload is uploaded. A few frames later, we found this packet that contains the commands executed by the attacker
+To answer this question, we need to inspect the network traffic after the payload is uploaded. A few frames later, we identified a packet containing the commands executed by the attacker.
 ![PCAPF](./screenshots/pcapf.png)
