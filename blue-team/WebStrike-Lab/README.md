@@ -12,3 +12,5 @@ Your task is to analyze the provided PCAP file to uncover how the file appeared 
 ### Q1 
 Identifying the geographical origin of the attack facilitates the implementation of geo-blocking measures and the analysis of threat intelligence. From which city did the attack originate?  
 
+![PCAP](../screenshots/pcap1.png)
+
