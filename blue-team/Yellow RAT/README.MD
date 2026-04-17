@@ -15,7 +15,7 @@ Understanding the adversary helps defend against attacks. What is the name of th
 
 ![q1](./screenshots/q1.png)  
 
-After conducting an extensive search on VirusTotal(we just have to search by the given hash), I only found a mention of the malware family in the Community section (which is likely there because of the lab).
+After conducting an extensive search on VirusTotal(we just have to search it by the given hash), I only found a mention of the malware family in the Community section (which is likely there because of the lab).
 
 ## Q2
 As part of our incident response, knowing common filenames the malware uses can help scan other workstations for potential infection. What is the common filename associated with the malware discovered on our workstations?
@@ -42,4 +42,11 @@ To completely eradicate the threat from Industries' systems, we need to identify
 ![q5](./screenshots/q5.png) 
 
 After failing to find the .dat file on VirusTotal, I searched for it online. After a few attempts, I came across the following page: https://redcanary.com/blog/threat-intelligence/yellow-cockatoo/, which contains the required information.
+
+## Q6
+It is crucial to identify the C2 servers with which the malware communicates to block its communication and prevent further data exfiltration. What is the C2 server that the malware is communicating with?
+
+![q6](./screenshots/q6.png) 
+
+To find this, we can go to VirusTotal. In the Behavior section, we just need to locate the “Memory Pattern URLs” tab (URLs that the malware contains by default).
 
