@@ -3,7 +3,7 @@
 **Platform:** CyberDefenders    
 **Difficulty:** Easy  
 **Duration:** ~30 min   
-**Category:** Thread Intel
+**Category:** Thread Intel  
 **Link:** https://cyberdefenders.org/blueteam-ctf-challenges/yellow-rat/
  
 ## Scenario
