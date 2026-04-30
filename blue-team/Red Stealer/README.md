@@ -1,4 +1,4 @@
-# PsExec Hunt Lab 
+# Red Stealer Lab 
 
 **Platform:** CyberDefenders    
 **Difficulty:** Easy  
