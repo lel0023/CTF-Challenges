@@ -1,4 +1,4 @@
-#  Web Investigation Lab
+#  XMLRat Lab
 
 **Platform:** CyberDefenders    
 **Difficulty:** Easy  
