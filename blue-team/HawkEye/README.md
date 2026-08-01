@@ -53,8 +53,6 @@ Using the previosly obtained MAC address "00:08:02:1c:47:ae", we can use a MAC l
 
 For this query, the tool used was "dnschecker.org".
 
----
-
 
 ## Q6
 Where is the headquarter of the company that manufactured the NIC of the most active computer at the link level?
@@ -108,5 +106,120 @@ This can easily be found by using an online IP geolocation tool:
 
 ![q12](./screenshots/q12.png)
 
+---
+
 ## Q13
 What operating system does the victim's computer run?
+
+To find this, we can inspect the User-Agent of an HTTP-request. Although this method is not always reliable and can be modified by the attacker, is easy to check and worth trying more often than not.
+
+Before we check the User-Agent, another fast verification is the TTL.Since it is different for every OS, a TTL close to 128 usually means the OS is Windows.
+
+
+![q13](./screenshots/q13.png)
+
+As stated before, we find a TTL of 128, so it's likely to be Windows. To search for the exact model we can use the User-Agent.
+
+![q13-1](./screenshots/q13-1.png)
+
+As shown in the capture above, the OS is Windows NT 6.1.
+
+## 14
+What is the name of the malicious file downloaded by the accountant?
+
+In the same HTTP request, we find a suspicious exe file, obviously the malicious file we are searching for.
+
+
+![q14](./screenshots/q14.png)
+
+
+## Q15
+What is the md5 hash of the downloaded file?
+
+To obtain the md5 hash, we can use the md5sum command on the malicious file.
+
+We can extract the file using Wireshark like this:
+
+![q15](./screenshots/q15.png)
+
+![q15-1](./screenshots/q15-1.png)
+
+Code to obtain the hash:
+
+```
+md5sum tkraw_Protected99.exe 
+    71826ba081e303866ce2a2534491a2f7  tkraw_Protected99.exe
+```
+
+## Q16
+What software runs the webserver that hosts the malware?
+
+To find information about the webserver, we have to look into the server response.
+
+![q16](./screenshots/q16.png)
+
+We find that the webserver name is LiteSpeed
+
+## Q17
+What is the public IP of the victim's computer?
+
+To find the public IP of the victim (10.4.10.132), we could look for NAT devices or gateways, as they communicate directly with private IPs. However, in this case it's much simpler, as the following HTTP request asks a bot for its public address.
+
+![q17](./screenshots/q17.png)
+
+## Q18
+In which country is the email server to which the stolen information is sent?
+
+We can obtain the IP of the email server by filtering for the SMTP protocol. Once we have the IP, we just need to use an IP geolocation tool like we did before.
+
+
+![q18](./screenshots/q18.png)
+
+
+![q18-1](./screenshots/q18-1.png)
+
+
+## Q19
+Analyzing the first extraction of information. What software runs the email server to which the stolen data is sent?
+
+This can be found in the first SMTP message exchanged:
+
+![q19](./screenshots/q19.png)
+
+## Q20
+To which email account is the stolen information sent?
+
+As seen before, the email account is sales.del@macwinlogistics.in
+
+## Q21
+What is the password used by the malware to send the email?
+
+![q21](./screenshots/q21.png)
+
+The password can be located easily with our current filter. Decoding it from base64 we obtain "Sales@23"
+
+## Q22
+Which malware variant exfiltrated the data?
+
+The malware variant can be found in the data sent via email. We can decode it using CyberChef.
+
+![q22](./screenshots/q22.png)
+
+The variant is "Reborn v9".
+
+## Q23
+What are the bankofamerica access credentials? (username:password)
+
+As we did before, using the decoded information we can find the credentials.
+
+![q23](./screenshots/q23.png)
+
+Credentials: roman.mcguire:P@ssw0rd$
+
+
+## Q24
+Every how many minutes does the collected data get exfiltrated?
+
+The data is sent to the email every 10 minutes
+
+![q24](./screenshots/q24.png)
