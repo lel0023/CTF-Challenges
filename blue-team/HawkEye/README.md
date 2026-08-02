@@ -3,7 +3,7 @@
 **Platform:** CyberDefenders    
 **Difficulty:** Medium
 **Duration:** ~90 min   
-**Category:** Network Forensics
+**Category:** Network Forensics  
 **Link:** https://cyberdefenders.org/blueteam-ctf-challenges/hawkeye/
  
 ## Scenario
