@@ -178,6 +178,61 @@ What is the main file that used to remove this information from ps.log?
 
 As stated before, the file "sysmod.ko" is essential to hide the process.
 
+
 ## Q14
 Inside the Main function, what is the function that causes requests to those servers?
+
+To analyze the binary, we will be using Cutter. You can learn to install it and customize it by clicking [here](https://www.youtube.com/watch?v=zrXA3AC_658).
+
+
+![q14](./screenshots/q14.png)
+
+![q14-1](./screenshots/q14-1.png)
+
+Looking at the main function, we notice that the decompiler is giving us the warning "bad information data", which means that either ghidra failed when it was locating the function address (something that can happen) or the malware is compressed to make our task harder.
+
+
+
+Assuming that our attacker wanted to protect the program, we will try to find evidence of the compression.
+
+Using a popular tool called diec, we find out that it was indeed compressed.
+
+![q14-2](./screenshots/q14-2.png)
+
+The packer is UPX, making the unpacking very easy.
+
+![q14-3](./screenshots/q14-3.png)
+
+Investigating the new unpacked file, we find a while(true) statement that generates new keys, communicates with a variable called "address", and saves the contents of /mail. Therefore, the function we were searching for is requestFile().
+
+![q14-4](./screenshots/q14-4.png)
+
+
+## Q15
+One of the IP's the malware contacted starts with 17. Provide the full IP
+
+Knowing the start of the IP, we can search for the string with Cutter quite easily.
+
+![q15](./screenshots/q15.png)
+
+The IP is "174.129.57.253"
+
+## Q16
+How many files the malware requested from external servers?
+
+We already know from previous questions that the malware requested 9 different files (the 9 images we found in wireshark in Q8).
+
+![q16](./screenshots/q16.png)
+
+## Q17
+What are the commands that the malware was receiving from attacker servers? Format: comma-separated in alphabetical order
+
+
+![q17](./screenshots/q17.png)
+
+Returning to the main function, we observe that it communicates with two different functions, decryptMessage() and processMessage(). For this question, the latter seems like a better starting point.
+
+![q17-1](./screenshots/q17-1.png)
+
+The processMessage() function contains an if statement with hexadecimal characters which translate to NOP and RUN, the two commands we were searching for.
 
