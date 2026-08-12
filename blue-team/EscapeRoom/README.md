@@ -1,8 +1,8 @@
 # EscapeRoom Lab
 
 **Platform:** CyberDefenders    
-**Difficulty:** Medium
-**Duration:** ~60 min   
+**Difficulty:** Medium    
+**Duration:** ~90 min     
 **Category:** Network Forensics   
 **Link:** https://cyberdefenders.org/blueteam-ctf-challenges/escaperoom/  
  
