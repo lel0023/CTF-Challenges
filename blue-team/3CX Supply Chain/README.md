@@ -3,7 +3,7 @@
 **Platform:** CyberDefenders    
 **Difficulty:** Easy  
 **Duration:** ~45 min   
-**Category:** Thread Intel
+**Category:** Thread Intel  
 **Link:** https://cyberdefenders.org/blueteam-ctf-challenges/3cx-supply-chain/
  
 ## Scenario
