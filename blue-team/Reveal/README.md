@@ -1,7 +1,7 @@
 # Reveal Lab
 
 **Platform:** CyberDefenders    
-**Difficulty:** Easy
+**Difficulty:** Easy  
 **Duration:** ~45 min     
 **Category:** Endpoint Forensics  
 **Link:** https://cyberdefenders.org/blueteam-ctf-challenges/reveal/  
