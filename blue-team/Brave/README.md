@@ -13,8 +13,8 @@ Your task is to analyze the provided memory dump to uncover details about the pr
 
 ## Tools
 
-Volatility 3
-Hexedit
+- Volatility 3  
+- Hexedit
 
 ## Q1
 What time was the RAM image acquired according to the suspect system?
