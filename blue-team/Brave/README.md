@@ -1,4 +1,4 @@
-# DanaBot Lab
+# Brave Lab
 
 **Platform:** CyberDefenders    
 **Difficulty:** Easy  
